@@ -1,0 +1,53 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+
+    cout << "Enter the number of elements in the array: ";
+    cin >> n;
+
+    int a[n];
+    int flag = 0, b, i, f, l, m;
+
+    for(i = 0; i < n; i++)
+    {
+        cout << "Enter the value for index number " << i << ": ";
+        cin >> a[i];
+    }
+
+    cout << "Enter the value to be searched: ";
+    cin >> b;
+
+    f = 0;
+    l = n - 1;
+
+    m = (f + l) / 2;
+
+    while(f <= l)
+    {
+        if(a[m] < b)
+        {
+            f = m + 1;
+        }
+        else if(a[m] > b)
+        {
+            l = m - 1;
+        }
+        else
+        {
+            flag = 1;
+            break;
+        }
+
+        m = (f + l) / 2;
+    }
+
+    if(flag == 1)
+        cout << "Found at a[" << m << "]";
+    else
+        cout << "Unsuccessful";
+
+    return 0;
+}
