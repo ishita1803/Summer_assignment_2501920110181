@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    char str[100];
+
+    cout<<"Enter a string: ";
+    cin.getline(str,100);
+
+    for(int i=0;i<strlen(str);i++)
+    {
+        int count=0;
+        for(int j=0;j<strlen(str);j++)
+        {
+            if(str[i]==str[j])
+                count++;
+        }
+
+        if(count==1)
+        {
+            cout<<"First non-repeating character = "<<str[i];
+            return 0;
+        }
+    }
+
+    cout<<"No non-repeating character";
+
+    return 0;
+}
