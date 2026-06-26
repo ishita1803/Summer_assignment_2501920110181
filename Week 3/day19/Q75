@@ -1,0 +1,36 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b;
+    cout<<"Enter the number of rows and columns: ";
+    cin>>a>>b;
+    int A[a][b], B[b][a];
+    for(int i=0; i<a; i++)
+    {
+        for(int j=0; j<b; j++)
+        {
+            cout<<"\nEnter A["<<i<<"]["<<j<<"]: ";
+            cin>>A[i][j];
+        }
+    }
+    for(int i=0; i<a; i++) 
+    {
+        for(int j=0; j<b; j++) 
+        {
+            B[j][i]=A[i][j];
+        }
+    }
+    cout<<"Transpose: ";
+    for(int i=0;i<b;i++)
+    {
+        for(int j=0;j<a;j++)
+        {
+            cout<<B[i][j]<<"\t";
+        }
+        cout<<"\n";
+    }
+    
+    return 0;
+}
