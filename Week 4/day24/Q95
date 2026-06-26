@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    char str[100],word[100],longest[100];
+    int j=0,maxLen=0;
+
+    cout<<"Enter a sentence: ";
+    cin.getline(str,100);
+
+    for(int i=0;;i++)
+    {
+        if(str[i]!=' '&&str[i]!='\0')
+        {
+            word[j]=str[i];
+            j++;
+        }
+        else
+        {
+            word[j]='\0';
+            if(j>maxLen)
+            {
+                maxLen=j;
+                strcpy(longest,word);
+            }
+            j=0;
+        }
+
+        if(str[i]=='\0')
+            break;
+    }
+
+    cout<<"Longest word = "<<longest;
+
+    return 0;
+}
