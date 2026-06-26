@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+
+    cout<<"Enter number of names: ";
+    cin>>n;
+
+    string name[n];
+
+    cin.ignore();
+
+    for(int i=0;i<n;i++)
+        getline(cin,name[i]);
+
+    sort(name,name+n);
+
+    cout<<"Sorted names:\n";
+
+    for(int i=0;i<n;i++)
+        cout<<name[i]<<endl;
+
+    return 0;
+}
