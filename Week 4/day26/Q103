@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int choice,amount,balance=10000;
+
+    cout<<"1.Check Balance\n2.Deposit\n3.Withdraw\nEnter your choice: ";
+    cin>>choice;
+
+    switch(choice)
+    {
+        case 1:
+            cout<<"Balance = "<<balance;
+            break;
+
+        case 2:
+            cout<<"Enter amount: ";
+            cin>>amount;
+            balance+=amount;
+            cout<<"Updated Balance = "<<balance;
+            break;
+
+        case 3:
+            cout<<"Enter amount: ";
+            cin>>amount;
+
+            if(amount<=balance)
+            {
+                balance-=amount;
+                cout<<"Updated Balance = "<<balance;
+            }
+            else
+                cout<<"Insufficient Balance";
+
+            break;
+
+        default:
+            cout<<"Invalid Choice";
+    }
+
+    return 0;
+}
