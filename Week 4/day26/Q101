@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int num=7,guess;
+
+    cout<<"Guess a number between 1 and 10: ";
+    cin>>guess;
+
+    if(guess==num)
+        cout<<"Correct Guess!";
+    else
+        cout<<"Wrong Guess! The number was "<<num;
+
+    return 0;
+}
