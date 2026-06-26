@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int ans,score=0;
+
+    cout<<"Q1. What is the capital of India?\n";
+    cout<<"1.Delhi\n2.Mumbai\n3.Kolkata\n4.Chennai\n";
+    cin>>ans;
+
+    if(ans==1)
+        score++;
+
+    cout<<"\nQ2. 5 + 3 = ?\n";
+    cout<<"1.6\n2.7\n3.8\n4.9\n";
+    cin>>ans;
+
+    if(ans==3)
+        score++;
+
+    cout<<"\nQ3. C++ was developed by?\n";
+    cout<<"1.Dennis Ritchie\n2.Bjarne Stroustrup\n3.James Gosling\n4.Guido van Rossum\n";
+    cin>>ans;
+
+    if(ans==2)
+        score++;
+
+    cout<<"\nYour Score = "<<score<<"/3";
+
+    return 0;
+}
