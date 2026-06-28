@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,choice,sum=0;
+
+    cout<<"Enter size of array: ";
+    cin>>n;
+
+    int a[n];
+
+    cout<<"Enter elements: ";
+    for(int i=0;i<n;i++)
+        cin>>a[i];
+
+    cout<<"1.Display\n2.Sum\n3.Maximum\nEnter Choice: ";
+    cin>>choice;
+
+    switch(choice)
+    {
+        case 1:
+            for(int i=0;i<n;i++)
+                cout<<a[i]<<" ";
+            break;
+
+        case 2:
+            for(int i=0;i<n;i++)
+                sum+=a[i];
+            cout<<"Sum = "<<sum;
+            break;
+
+        case 3:
+            cout<<"Maximum = "<<*max_element(a,a+n);
+            break;
+
+        default:
+            cout<<"Invalid Choice";
+    }
+
+    return 0;
+}
