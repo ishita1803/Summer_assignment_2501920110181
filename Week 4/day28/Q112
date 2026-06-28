@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Contact
+{
+    char name[50];
+    char phone[15];
+};
+
+int main()
+{
+    Contact c;
+
+    cout<<"Enter Name: ";
+    cin.getline(c.name,50);
+
+    cout<<"Enter Phone Number: ";
+    cin.getline(c.phone,15);
+
+    cout<<"\nContact Details\n";
+    cout<<"Name: "<<c.name<<endl;
+    cout<<"Phone: "<<c.phone;
+
+    return 0;
+}
