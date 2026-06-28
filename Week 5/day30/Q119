@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+
+    cout<<"Enter number of employees: ";
+    cin>>n;
+
+    int id[n];
+    char name[n][50];
+    float salary[n];
+
+    cin.ignore();
+
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Employee ID: ";
+        cin>>id[i];
+
+        cin.ignore();
+
+        cout<<"Employee Name: ";
+        cin.getline(name[i],50);
+
+        cout<<"Salary: ";
+        cin>>salary[i];
+
+        cin.ignore();
+    }
+
+    cout<<"\nEmployee Records\n";
+
+    for(int i=0;i<n;i++)
+    {
+        cout<<"ID: "<<id[i]<<endl;
+        cout<<"Name: "<<name[i]<<endl;
+        cout<<"Salary: "<<salary[i]<<endl<<endl;
+    }
+
+    return 0;
+}
