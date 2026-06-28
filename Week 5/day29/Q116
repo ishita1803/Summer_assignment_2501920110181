@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Item
+{
+    int id,quantity;
+    char name[50];
+    float price;
+};
+
+int main()
+{
+    Item i;
+
+    cout<<"Enter Item ID: ";
+    cin>>i.id;
+
+    cin.ignore();
+
+    cout<<"Enter Item Name: ";
+    cin.getline(i.name,50);
+
+    cout<<"Enter Quantity: ";
+    cin>>i.quantity;
+
+    cout<<"Enter Price: ";
+    cin>>i.price;
+
+    cout<<"\nInventory Details\n";
+    cout<<"Item ID: "<<i.id<<endl;
+    cout<<"Item Name: "<<i.name<<endl;
+    cout<<"Quantity: "<<i.quantity<<endl;
+    cout<<"Price: "<<i.price;
+
+    return 0;
+}
