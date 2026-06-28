@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+
+    cout<<"Enter number of students: ";
+    cin>>n;
+
+    int roll[n];
+    char name[n][50];
+    float marks[n];
+
+    cin.ignore();
+
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter Roll No: ";
+        cin>>roll[i];
+
+        cin.ignore();
+
+        cout<<"Enter Name: ";
+        cin.getline(name[i],50);
+
+        cout<<"Enter Marks: ";
+        cin>>marks[i];
+
+        cin.ignore();
+    }
+
+    cout<<"\nStudent Records\n";
+
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Roll: "<<roll[i]<<endl;
+        cout<<"Name: "<<name[i]<<endl;
+        cout<<"Marks: "<<marks[i]<<endl<<endl;
+    }
+
+    return 0;
+}
