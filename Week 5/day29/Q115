@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    char str[100];
+    int choice;
+
+    cout<<"Enter a string: ";
+    cin.getline(str,100);
+
+    cout<<"1.Length\n2.Reverse\n3.Uppercase\nEnter Choice: ";
+    cin>>choice;
+
+    switch(choice)
+    {
+        case 1:
+            cout<<"Length = "<<strlen(str);
+            break;
+
+        case 2:
+            strrev(str);
+            cout<<"Reverse = "<<str;
+            break;
+
+        case 3:
+            for(int i=0;str[i]!='\0';i++)
+            {
+                if(str[i]>='a'&&str[i]<='z')
+                    str[i]-=32;
+            }
+            cout<<"Uppercase = "<<str;
+            break;
+
+        default:
+            cout<<"Invalid Choice";
+    }
+
+    return 0;
+}
