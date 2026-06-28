@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Ticket
+{
+    char name[50];
+    int seats;
+};
+
+int main()
+{
+    Ticket t;
+
+    cout<<"Enter Passenger Name: ";
+    cin.getline(t.name,50);
+
+    cout<<"Enter Number of Seats: ";
+    cin>>t.seats;
+
+    cout<<"\nTicket Details\n";
+    cout<<"Passenger Name: "<<t.name<<endl;
+    cout<<"Seats Booked: "<<t.seats;
+
+    return 0;
+}
