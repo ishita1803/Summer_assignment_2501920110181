@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    float basic,hra,da,gross;
+
+    cout<<"Enter Basic Salary: ";
+    cin>>basic;
+
+    hra=0.20*basic;
+    da=0.10*basic;
+    gross=basic+hra+da;
+
+    cout<<"Basic Salary = "<<basic<<endl;
+    cout<<"HRA = "<<hra<<endl;
+    cout<<"DA = "<<da<<endl;
+    cout<<"Gross Salary = "<<gross;
+
+    return 0;
+}
